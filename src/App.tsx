@@ -13,13 +13,13 @@ import {
 const AppLayout = () => (
   <>
     <div>
-      <Link to={'/table'}>加载约定式路由子应用</Link>
+      <Link to={'/table'}>Table</Link>
     </div>
     <div>
-      <Link to={'/dashboard'}>加载自控式路由子应用</Link>
+      <Link to={'/dashboard'}>Dashboard</Link>
     </div>
     <div>
-      <Link to={'/'}>卸载子应用</Link>
+      <Link to={'/'}>Root</Link>
     </div>
     <Outlet />
   </>
