@@ -38,8 +38,6 @@ const App = () => {
               key={app.name}
               path={`${app.name.toLowerCase()}/*`}
               element={
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                // @ts-expect-error
                 <Component
                   loadable={{
                     loading: ({ pastDelay, error }: any) => {
@@ -79,15 +77,17 @@ export default defineConfig(App, {
     manifest: {
       getAppList: async () => {
         // get from remote api
+        // eslint-disable-next-line no-console
+        console.log('Runs in runtime');
         return [
           {
             name: 'Table',
-            entry: 'http://localhost:8001',
+            entry: 'http://localhost:8081',
             // activeWhen: '/table',
           },
           {
             name: 'Dashboard',
-            entry: 'http://localhost:8002',
+            entry: 'http://localhost:8082',
             // activeWhen: '/dashboard',
           },
         ];

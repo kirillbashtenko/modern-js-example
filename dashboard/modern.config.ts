@@ -10,9 +10,7 @@ export default defineConfig<'rspack'>({
     state: true,
   },
   deploy: {
-    microFrontend: {
-      enableHtmlEntry: false,
-    },
+    microFrontend: true,
   },
   plugins: [appTools(), garfishPlugin()],
 });
